@@ -810,8 +810,8 @@
             </li>
             <li class="nav-item">
                 <button type="button" class="nav-link {{ request()->has('compare') ? 'active' : '' }}" role="tab"
-                    data-bs-toggle="tab" data-bs-target="#navs-pills-justified-messages" aria-controls="navs-pills-justified-messages"
-                    aria-selected="{{ request()->has('compare') ? 'true' : 'false' }}">
+                data-bs-toggle="tab" data-bs-target="#navs-pills-justified-messages" aria-controls="navs-pills-justified-messages"
+                aria-selected="{{ request()->has('compare') ? 'true' : 'false' }}">
                     <span class="d-none d-sm-inline-flex align-items-center"><i
                             class="fa-solid fa-link me-2"></i>Hubungan</span>
                     <i class="fa-solid fa-link icon-sm d-sm-none"></i>
@@ -1154,7 +1154,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade grab" id="navs-pills-justified-profile" role="tabpanel">
+                 </div> <div class="tab-pane fade grab" id="navs-pills-justified-profile" role="tabpanel">
                 <div class="mb-3 overflow-auto">
                     <div class="row justify-center m-5">
                         @if (is_iterable($rootMember))
@@ -1170,7 +1170,7 @@
                         @endif
                     </div>
                 </div>
-            </div>
+                
             <!-- BAGIAN HUBUNGAN KELUARGA -->
             <div class="tab-pane fade {{ request()->has('compare') ? 'show active' : '' }}" id="navs-pills-justified-messages" role="tabpanel">
                 {{-- ini page 3 --}}
