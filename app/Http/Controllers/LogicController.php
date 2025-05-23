@@ -369,24 +369,24 @@ class LogicController extends Controller
             }
 
             // 3. cek saudara kandung
-            if ($current->parent_id === $next->parent_id) {
-                if ($current->urutan < $next->urutan) {
-                    // current lebih tua → kakak
-                    $role = $current->gender === 'Laki-Laki' ? 'mas' : 'mbak';
-                } else {
-                    // current lebih muda → adik
-                    $role = $current->gender === 'Laki-Laki'
-                        ? 'adik laki-laki'
-                        : 'adik perempuan';
-                }
-                $detailedPath[] = " {$current->nama} {$role} dari {$next->nama}";
-                continue;
-            }
+            // if ($current->parent_id === $next->parent_id) {
+            //     if ($current->urutan < $next->urutan) {
+            //         // current lebih tua → kakak
+            //         $role = $current->gender === 'Laki-Laki' ? 'mas' : 'mbak';
+            //     } else {
+            //         // current lebih muda → adik
+            //         $role = $current->gender === 'Laki-Laki'
+            //             ? 'adik laki-laki'
+            //             : 'adik perempuan';
+            //     }
+            //     $detailedPath[] = " {$current->nama} {$role} dari {$next->nama}";
+            //     continue;
+            // }
          
         }
 
         return [
-            'relation' => "{$firstPerson} {$relationshipDescription} ",
+            'relation' => "{$firstPerson} {$relationshipDescription} {$lastPerson} ",
             'detailedPath' => $detailedPath
         ];
     }
